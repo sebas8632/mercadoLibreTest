@@ -1,0 +1,11 @@
+framework module JSFSNetwork {
+  umbrella header "JSFSNetwork.h"
+
+  export *
+  module * { export * }
+}
+
+module JSFSNetwork.Swift {
+    header "JSFSNetwork-Swift.h"
+    requires objc
+}

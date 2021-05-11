@@ -1,0 +1,20 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.0.3",
+  "iOS" : [
+    {
+      "hash" : "a1b01310d4fba5a2fef1cd3f9ec9612784d0da58852287e782ed17e20d1d4fc7",
+      "name" : "JSFSUIModule",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+    }
+  ]
+}
