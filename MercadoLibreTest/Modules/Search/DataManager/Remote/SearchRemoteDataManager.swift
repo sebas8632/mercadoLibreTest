@@ -6,7 +6,15 @@
 //
 
 import Foundation
+import JSFSNetwork
 
-class SearchRemoteDataManager: SearchRemoteDataManagerProtocol {
+class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
+    var interactor: SearchRemoteDataManagerOutputProtocol?
+    
+    var sessionProvider: ProviderProtocol?
+
+    func searchProducts(name: String) {
+        // TODO 
+    }
     
 }

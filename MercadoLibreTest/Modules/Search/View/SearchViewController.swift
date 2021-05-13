@@ -19,23 +19,23 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     }
     
     func setupView() {
-        
+        // TODO
     }
     
     func searchItems() {
-        
+        // TODO
     }
     
     func selectItem() {
-        
+        // TODO
     }
     
     func presentLoader() {
-        
+        // TODO
     }
     
     func hideLoader() {
-        
+        // TODO
     }
 
 }

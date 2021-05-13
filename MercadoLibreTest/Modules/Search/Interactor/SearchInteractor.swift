@@ -8,9 +8,18 @@
 import Foundation
 
 class SearchInteractor: SearchInteractorInputProtocol {
-   
+    var presenter: SearchInteractorOutputProtocol?
     var localDataManager: SearchLocalDataManagerProtocol?
+    var remoteDataManager: SearchRemoteDataManagerInputProtocol?
     
-    var remoteDataManager: SearchRemoteDataManagerProtocol?
+    func searchProducts(name: String) {
+        remoteDataManager?.searchProducts(name: name)
+    }
+}
+
+extension SearchInteractor: SearchRemoteDataManagerOutputProtocol {
+    func didRetrieveProducts(products: [ProductModel]) {
+        presenter?.didRetrieveProducts(products: products)
+    }
     
 }

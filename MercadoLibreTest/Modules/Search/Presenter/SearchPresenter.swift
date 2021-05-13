@@ -14,15 +14,18 @@ class SearchPresenter: SearchPresenterInputProtocol {
     var router: SearchRouterProtocol?
     
     func viewDidLoad() {
-        
+        // TODO
     }
     
     func viewWillAppear() {
-        
+        // TODO
     }
     
 }
 
 extension SearchPresenter: SearchInteractorOutputProtocol {
+    func didRetrieveProducts(products: [ProductModel]) {
+        // TODO
+    }
     
 }

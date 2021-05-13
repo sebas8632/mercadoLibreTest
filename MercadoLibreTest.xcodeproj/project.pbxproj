@@ -15,6 +15,13 @@
 		B13B8C1C264CCD8E00FC74F9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C1B264CCD8E00FC74F9 /* SearchView.swift */; };
 		B13B8C22264CD59200FC74F9 /* SearchRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C21264CD59200FC74F9 /* SearchRemoteDataManager.swift */; };
 		B13B8C28264CD5C200FC74F9 /* SearchLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C27264CD5C200FC74F9 /* SearchLocalDataManager.swift */; };
+		B13B8C2C264CE18500FC74F9 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C2B264CE18500FC74F9 /* ResultModel.swift */; };
+		B13B8C32264CE1E500FC74F9 /* PagingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C31264CE1E500FC74F9 /* PagingModel.swift */; };
+		B13B8C3A264CE4A200FC74F9 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C39264CE4A200FC74F9 /* ProductModel.swift */; };
+		B13B8C4D264CF5B800FC74F9 /* MockSearchRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C4C264CF5B800FC74F9 /* MockSearchRemoteDataManager.swift */; };
+		B13B8C53264D010900FC74F9 /* MockSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C52264D010900FC74F9 /* MockSearchInteractor.swift */; };
+		B13B8C5D264D094B00FC74F9 /* SearchInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C5C264D094B00FC74F9 /* SearchInteractorTest.swift */; };
+		B13B8C61264D0C1F00FC74F9 /* MockSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C60264D0C1F00FC74F9 /* MockSearchPresenter.swift */; };
 		B1BBE48E264A569B00F43F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE48D264A569B00F43F5A /* AppDelegate.swift */; };
 		B1BBE497264A569D00F43F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BBE496264A569D00F43F5A /* Assets.xcassets */; };
 		B1BBE49A264A569D00F43F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BBE498264A569D00F43F5A /* LaunchScreen.storyboard */; };
@@ -67,6 +74,13 @@
 		B13B8C1B264CCD8E00FC74F9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B13B8C21264CD59200FC74F9 /* SearchRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemoteDataManager.swift; sourceTree = "<group>"; };
 		B13B8C27264CD5C200FC74F9 /* SearchLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalDataManager.swift; sourceTree = "<group>"; };
+		B13B8C2B264CE18500FC74F9 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		B13B8C31264CE1E500FC74F9 /* PagingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingModel.swift; sourceTree = "<group>"; };
+		B13B8C39264CE4A200FC74F9 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B13B8C4C264CF5B800FC74F9 /* MockSearchRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRemoteDataManager.swift; sourceTree = "<group>"; };
+		B13B8C52264D010900FC74F9 /* MockSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchInteractor.swift; sourceTree = "<group>"; };
+		B13B8C5C264D094B00FC74F9 /* SearchInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTest.swift; sourceTree = "<group>"; };
+		B13B8C60264D0C1F00FC74F9 /* MockSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchPresenter.swift; sourceTree = "<group>"; };
 		B1BBE48A264A569B00F43F5A /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BBE48D264A569B00F43F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BBE496264A569D00F43F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +182,9 @@
 		B13B8BF1264CB4EF00FC74F9 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8C2B264CE18500FC74F9 /* ResultModel.swift */,
+				B13B8C31264CE1E500FC74F9 /* PagingModel.swift */,
+				B13B8C39264CE4A200FC74F9 /* ProductModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -209,10 +226,7 @@
 		B13B8BFA264CB53A00FC74F9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B13B8BFE264CB55A00FC74F9 /* View */,
-				B13B8BFD264CB55500FC74F9 /* Presenter */,
-				B13B8BFC264CB54E00FC74F9 /* Interactor */,
-				B13B8BFB264CB54100FC74F9 /* DataManager */,
+				B13B8C40264CF3E600FC74F9 /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -220,6 +234,7 @@
 		B13B8BFB264CB54100FC74F9 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8C45264CF4A100FC74F9 /* Remote */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -227,6 +242,7 @@
 		B13B8BFC264CB54E00FC74F9 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8C5C264D094B00FC74F9 /* SearchInteractorTest.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -259,6 +275,83 @@
 				B13B8C27264CD5C200FC74F9 /* SearchLocalDataManager.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		B13B8C3D264CF36C00FC74F9 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		B13B8C3E264CF3C300FC74F9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8BFE264CB55A00FC74F9 /* View */,
+				B13B8BFD264CB55500FC74F9 /* Presenter */,
+				B13B8BFC264CB54E00FC74F9 /* Interactor */,
+				B13B8BFB264CB54100FC74F9 /* DataManager */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B13B8C3F264CF3C900FC74F9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C3D264CF36C00FC74F9 /* VIew */,
+				B13B8C41264CF44A00FC74F9 /* Presenter */,
+				B13B8C42264CF45000FC74F9 /* Interactor */,
+				B13B8C43264CF45400FC74F9 /* DataManager */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B13B8C40264CF3E600FC74F9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C3E264CF3C300FC74F9 /* Tests */,
+				B13B8C3F264CF3C900FC74F9 /* Mocks */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B13B8C41264CF44A00FC74F9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C60264D0C1F00FC74F9 /* MockSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B13B8C42264CF45000FC74F9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C52264D010900FC74F9 /* MockSearchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B13B8C43264CF45400FC74F9 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C44264CF49800FC74F9 /* Remote */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B13B8C44264CF49800FC74F9 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C4C264CF5B800FC74F9 /* MockSearchRemoteDataManager.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B13B8C45264CF4A100FC74F9 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		B1BBE481264A569B00F43F5A = {
@@ -473,9 +566,12 @@
 			files = (
 				B13B8C08264CC00E00FC74F9 /* SearchRouter.swift in Sources */,
 				B13B8C14264CC4EB00FC74F9 /* SearchViewController.swift in Sources */,
+				B13B8C2C264CE18500FC74F9 /* ResultModel.swift in Sources */,
+				B13B8C32264CE1E500FC74F9 /* PagingModel.swift in Sources */,
 				B13B8C10264CC23000FC74F9 /* SearchPresenter.swift in Sources */,
 				B13B8C22264CD59200FC74F9 /* SearchRemoteDataManager.swift in Sources */,
 				B13B8C1C264CCD8E00FC74F9 /* SearchView.swift in Sources */,
+				B13B8C3A264CE4A200FC74F9 /* ProductModel.swift in Sources */,
 				B13B8C28264CD5C200FC74F9 /* SearchLocalDataManager.swift in Sources */,
 				B1BBE48E264A569B00F43F5A /* AppDelegate.swift in Sources */,
 				B13B8BF7264CB53000FC74F9 /* SearchProtocols.swift in Sources */,
@@ -487,7 +583,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13B8C61264D0C1F00FC74F9 /* MockSearchPresenter.swift in Sources */,
+				B13B8C53264D010900FC74F9 /* MockSearchInteractor.swift in Sources */,
 				B1BBE4A5264A569E00F43F5A /* MercadoLibreTestTests.swift in Sources */,
+				B13B8C5D264D094B00FC74F9 /* SearchInteractorTest.swift in Sources */,
+				B13B8C4D264CF5B800FC74F9 /* MockSearchRemoteDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +795,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N9E796HZ3C;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = MercadoLibreTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

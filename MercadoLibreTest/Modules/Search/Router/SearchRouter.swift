@@ -15,7 +15,7 @@ class SearchRouter: SearchRouterProtocol {
         let presenter: SearchPresenterInputProtocol & SearchInteractorOutputProtocol = SearchPresenter()
         let interactor: SearchInteractorInputProtocol = SearchInteractor()
         let localDataManager: SearchLocalDataManagerProtocol = SearchLocalDataManager()
-        let remoteDataManager: SearchRemoteDataManagerProtocol = SearchRemoteDataManager()
+        let remoteDataManager: SearchRemoteDataManagerInputProtocol = SearchRemoteDataManager()
         let router: SearchRouterProtocol = SearchRouter()
         
         view.presenter = presenter
@@ -29,6 +29,7 @@ class SearchRouter: SearchRouterProtocol {
     }
     
     func pushToItemDetail() -> Any {
+        // TODO
         return false
     }
     
