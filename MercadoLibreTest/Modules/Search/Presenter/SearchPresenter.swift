@@ -21,11 +21,19 @@ class SearchPresenter: SearchPresenterInputProtocol {
         // TODO
     }
     
+    func searchProducts(name: String) {
+        interactor?.searchProducts(name: name)
+    }
+    
 }
 
 extension SearchPresenter: SearchInteractorOutputProtocol {
+    
     func didRetrieveProducts(products: [ProductModel]) {
-        // TODO
+        view?.didRetrieveProducts(products: products)
     }
     
+    func didRetrievedError(error: String) {
+        view?.didRetrievedError(error: error)
+    }
 }

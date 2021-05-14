@@ -17,6 +17,7 @@ struct ProductModel: Codable {
     var address: AddressModel
     var attributes: [AttributeModel]
     var condition: String
+    var thumbnail: String
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
@@ -27,6 +28,7 @@ struct ProductModel: Codable {
         case address
         case attributes
         case condition
+        case thumbnail
     }
 }
 
@@ -42,7 +44,7 @@ struct AddressModel: Codable {
 
 struct AttributeModel: Codable {
     var name: String
-    var value: String
+    var value: String?
     var groupId: String
     var groupName: String
     

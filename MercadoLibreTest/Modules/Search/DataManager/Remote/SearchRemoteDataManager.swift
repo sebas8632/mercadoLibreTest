@@ -14,7 +14,19 @@ class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
     var sessionProvider: ProviderProtocol?
 
     func searchProducts(name: String) {
-        // TODO 
+        sessionProvider?.request(type: ResultModel.self, service: SearchService.search(query: name), completion: { [weak self] (result) in
+            switch result {
+            case .success(let result):
+                DispatchQueue.main.async {
+                    self?.interactor?.didRetrieveProducts(products: result.results)
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.interactor?.didRetrievedError(error: error)
+                }
+            }
+        })
+        
     }
     
 }

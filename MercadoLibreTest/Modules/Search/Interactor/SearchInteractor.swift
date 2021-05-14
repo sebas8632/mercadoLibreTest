@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JSFSNetwork
 
 class SearchInteractor: SearchInteractorInputProtocol {
     var presenter: SearchInteractorOutputProtocol?
@@ -18,8 +19,12 @@ class SearchInteractor: SearchInteractorInputProtocol {
 }
 
 extension SearchInteractor: SearchRemoteDataManagerOutputProtocol {
+    
     func didRetrieveProducts(products: [ProductModel]) {
         presenter?.didRetrieveProducts(products: products)
     }
     
+    func didRetrievedError(error: NetworkError) {
+        presenter?.didRetrievedError(error: error.rawValue)
+    }
 }

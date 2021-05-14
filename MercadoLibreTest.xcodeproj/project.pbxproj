@@ -22,10 +22,15 @@
 		B13B8C53264D010900FC74F9 /* MockSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C52264D010900FC74F9 /* MockSearchInteractor.swift */; };
 		B13B8C5D264D094B00FC74F9 /* SearchInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C5C264D094B00FC74F9 /* SearchInteractorTest.swift */; };
 		B13B8C61264D0C1F00FC74F9 /* MockSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C60264D0C1F00FC74F9 /* MockSearchPresenter.swift */; };
+		B13B8C65264DBADA00FC74F9 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C64264DBADA00FC74F9 /* SearchService.swift */; };
+		B13B8C69264DBB2200FC74F9 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C68264DBB2200FC74F9 /* NetworkConstants.swift */; };
+		B13B8C71264E020700FC74F9 /* SearchPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C70264E020700FC74F9 /* SearchPresenterTest.swift */; };
+		B13B8C76264E02B700FC74F9 /* MockSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C75264E02B700FC74F9 /* MockSearchView.swift */; };
+		B13B8C7C264E033500FC74F9 /* MockSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C7B264E033500FC74F9 /* MockSearchRouter.swift */; };
+		B13B8C80264E0A0E00FC74F9 /* SearchViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C7F264E0A0E00FC74F9 /* SearchViewTest.swift */; };
 		B1BBE48E264A569B00F43F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE48D264A569B00F43F5A /* AppDelegate.swift */; };
 		B1BBE497264A569D00F43F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BBE496264A569D00F43F5A /* Assets.xcassets */; };
 		B1BBE49A264A569D00F43F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BBE498264A569D00F43F5A /* LaunchScreen.storyboard */; };
-		B1BBE4A5264A569E00F43F5A /* MercadoLibreTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE4A4264A569E00F43F5A /* MercadoLibreTestTests.swift */; };
 		B1BBE4B0264A569E00F43F5A /* MercadoLibreTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE4AF264A569E00F43F5A /* MercadoLibreTestUITests.swift */; };
 		B1BBE4C7264A586B00F43F5A /* JSFSNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */; };
 		B1BBE4C8264A586B00F43F5A /* JSFSNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -81,13 +86,18 @@
 		B13B8C52264D010900FC74F9 /* MockSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchInteractor.swift; sourceTree = "<group>"; };
 		B13B8C5C264D094B00FC74F9 /* SearchInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTest.swift; sourceTree = "<group>"; };
 		B13B8C60264D0C1F00FC74F9 /* MockSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchPresenter.swift; sourceTree = "<group>"; };
+		B13B8C64264DBADA00FC74F9 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		B13B8C68264DBB2200FC74F9 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		B13B8C70264E020700FC74F9 /* SearchPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTest.swift; sourceTree = "<group>"; };
+		B13B8C75264E02B700FC74F9 /* MockSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchView.swift; sourceTree = "<group>"; };
+		B13B8C7B264E033500FC74F9 /* MockSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRouter.swift; sourceTree = "<group>"; };
+		B13B8C7F264E0A0E00FC74F9 /* SearchViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTest.swift; sourceTree = "<group>"; };
 		B1BBE48A264A569B00F43F5A /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BBE48D264A569B00F43F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BBE496264A569D00F43F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1BBE499264A569D00F43F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1BBE49B264A569D00F43F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BBE4A0264A569E00F43F5A /* MercadoLibreTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoLibreTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1BBE4A4264A569E00F43F5A /* MercadoLibreTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoLibreTestTests.swift; sourceTree = "<group>"; };
 		B1BBE4A6264A569E00F43F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BBE4AB264A569E00F43F5A /* MercadoLibreTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoLibreTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BBE4AF264A569E00F43F5A /* MercadoLibreTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoLibreTestUITests.swift; sourceTree = "<group>"; };
@@ -129,6 +139,7 @@
 				B1BBE496264A569D00F43F5A /* Assets.xcassets */,
 				B1BBE48D264A569B00F43F5A /* AppDelegate.swift */,
 				B1BBE498264A569D00F43F5A /* LaunchScreen.storyboard */,
+				B13B8C68264DBB2200FC74F9 /* NetworkConstants.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 		B13B8BFD264CB55500FC74F9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8C70264E020700FC74F9 /* SearchPresenterTest.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 		B13B8BFE264CB55A00FC74F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8C7F264E0A0E00FC74F9 /* SearchViewTest.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				B13B8C21264CD59200FC74F9 /* SearchRemoteDataManager.swift */,
+				B13B8C64264DBADA00FC74F9 /* SearchService.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -280,6 +294,7 @@
 		B13B8C3D264CF36C00FC74F9 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8C75264E02B700FC74F9 /* MockSearchView.swift */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -300,6 +315,7 @@
 			children = (
 				B13B8C3D264CF36C00FC74F9 /* VIew */,
 				B13B8C41264CF44A00FC74F9 /* Presenter */,
+				B13B8C74264E027600FC74F9 /* Router */,
 				B13B8C42264CF45000FC74F9 /* Interactor */,
 				B13B8C43264CF45400FC74F9 /* DataManager */,
 			);
@@ -354,6 +370,14 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
+		B13B8C74264E027600FC74F9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C7B264E033500FC74F9 /* MockSearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		B1BBE481264A569B00F43F5A = {
 			isa = PBXGroup;
 			children = (
@@ -389,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				B13B8BFA264CB53A00FC74F9 /* Modules */,
-				B1BBE4A4264A569E00F43F5A /* MercadoLibreTestTests.swift */,
 				B1BBE4A6264A569E00F43F5A /* Info.plist */,
 			);
 			path = MercadoLibreTestTests;
@@ -564,9 +587,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13B8C65264DBADA00FC74F9 /* SearchService.swift in Sources */,
 				B13B8C08264CC00E00FC74F9 /* SearchRouter.swift in Sources */,
 				B13B8C14264CC4EB00FC74F9 /* SearchViewController.swift in Sources */,
 				B13B8C2C264CE18500FC74F9 /* ResultModel.swift in Sources */,
+				B13B8C69264DBB2200FC74F9 /* NetworkConstants.swift in Sources */,
 				B13B8C32264CE1E500FC74F9 /* PagingModel.swift in Sources */,
 				B13B8C10264CC23000FC74F9 /* SearchPresenter.swift in Sources */,
 				B13B8C22264CD59200FC74F9 /* SearchRemoteDataManager.swift in Sources */,
@@ -583,10 +608,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13B8C80264E0A0E00FC74F9 /* SearchViewTest.swift in Sources */,
 				B13B8C61264D0C1F00FC74F9 /* MockSearchPresenter.swift in Sources */,
 				B13B8C53264D010900FC74F9 /* MockSearchInteractor.swift in Sources */,
-				B1BBE4A5264A569E00F43F5A /* MercadoLibreTestTests.swift in Sources */,
+				B13B8C71264E020700FC74F9 /* SearchPresenterTest.swift in Sources */,
 				B13B8C5D264D094B00FC74F9 /* SearchInteractorTest.swift in Sources */,
+				B13B8C76264E02B700FC74F9 /* MockSearchView.swift in Sources */,
+				B13B8C7C264E033500FC74F9 /* MockSearchRouter.swift in Sources */,
 				B13B8C4D264CF5B800FC74F9 /* MockSearchRemoteDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

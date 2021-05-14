@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JSFSNetwork
 
 class SearchRouter: SearchRouterProtocol {
     
@@ -13,7 +14,7 @@ class SearchRouter: SearchRouterProtocol {
         
         let view: SearchViewController = SearchViewController()
         let presenter: SearchPresenterInputProtocol & SearchInteractorOutputProtocol = SearchPresenter()
-        let interactor: SearchInteractorInputProtocol = SearchInteractor()
+        let interactor: SearchInteractorInputProtocol & SearchRemoteDataManagerOutputProtocol = SearchInteractor()
         let localDataManager: SearchLocalDataManagerProtocol = SearchLocalDataManager()
         let remoteDataManager: SearchRemoteDataManagerInputProtocol = SearchRemoteDataManager()
         let router: SearchRouterProtocol = SearchRouter()
@@ -24,6 +25,9 @@ class SearchRouter: SearchRouterProtocol {
         presenter.router = router
         interactor.localDataManager = localDataManager
         interactor.remoteDataManager = remoteDataManager
+        interactor.presenter = presenter
+        remoteDataManager.sessionProvider = URLSessionProvider()
+        remoteDataManager.interactor = interactor
         
         return view
     }

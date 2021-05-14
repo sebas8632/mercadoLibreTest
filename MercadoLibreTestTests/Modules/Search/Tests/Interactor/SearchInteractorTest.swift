@@ -34,10 +34,21 @@ class SearchInteractorTest: XCTestCase {
         // When
         sut?.searchProducts(name: name)
         // Then
-        XCTAssertTrue(mockRemoteDataManager.calls.didRetrieveProducts)
+        XCTAssertTrue(mockRemoteDataManager.calls.searchProducts)
         XCTAssertTrue(mockPresenter.calls.didRetrieveProducts)
         XCTAssertEqual(mockPresenter.arrayProducts.count, 2)
         XCTAssertEqual(mockPresenter.arrayProducts.first?.identifier, "hkjh")
+    }
+
+    func testFailSearchProducts() throws {
+        // Given
+        let failname: String = "Fail Product Name"
+        // When
+        sut?.searchProducts(name: failname)
+        // Then
+        XCTAssertTrue(mockRemoteDataManager.calls.searchProducts)
+        XCTAssertTrue(mockPresenter.calls.didRetrieveError)
+        XCTAssertEqual(mockPresenter.errorMessage, "Has ocurred an error")
     }
 
 }

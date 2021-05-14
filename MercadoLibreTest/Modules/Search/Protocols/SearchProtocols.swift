@@ -23,8 +23,9 @@ protocol SearchViewInputProtocol: class {
     
     ///
     /// This function search the items indicate on the search component.
+    ///  - Parameter item: Name of the item that is searching for.
     ///
-    func searchItems()
+    func searchItems(item: String)
     
     ///
     /// This function select the specific item to get the detail.
@@ -40,6 +41,12 @@ protocol SearchViewInputProtocol: class {
     /// Function to hide the loader.
     ///
     func hideLoader()
+    
+    ///
+    /// Function to show an specific error.
+    /// - Parameter error:
+    ///
+    func showError(error: String)
     
 }
 
@@ -62,10 +69,27 @@ protocol SearchPresenterInputProtocol: class {
     /// This functions is used when the view will appear.
     ///
     func viewWillAppear()
+    
+    ///
+    /// Function to search products.
+    /// - Parameter name: Name of the product.
+    ///
+    func searchProducts(name: String)
 }
 
 protocol SearchPresenterOutputProtocol {
-    // TODO
+    
+    ///
+    ///  Function to response when the app has retrieved the products.
+    ///  - Parameter products: List of products as result of the searching.
+    ///
+    func didRetrieveProducts(products: [ProductModel])
+    
+    ///
+    /// Function to retrieve the error.
+    /// - Parameters error: error from presenter.
+    ///
+    func didRetrievedError(error: String)
 }
 
 protocol SearchInteractorInputProtocol: class {
@@ -89,6 +113,12 @@ protocol SearchInteractorOutputProtocol {
     ///  - Parameter products: List of products as result of the searching.
     ///
     func didRetrieveProducts(products: [ProductModel])
+    
+    ///
+    /// Function to retrieve the error.
+    /// - Parameters error: error from interactor.
+    ///
+    func didRetrievedError(error: String)
     
 }
 
@@ -117,7 +147,18 @@ protocol SearchRemoteDataManagerOutputProtocol {
     
     // MARK: FUNCTIONS
     
+    ///
+    /// Function to retrieve products to Interactor..
+    /// - Parameter products: products retrieved from mercado libre service.
+    ///
     func didRetrieveProducts(products: [ProductModel])
+    
+    ///
+    /// Function to retrieve the error.
+    /// - Parameters error: error from session provider.
+    ///
+    func didRetrievedError(error: NetworkError)
+    
 }
 
 protocol SearchRouterProtocol: class {
