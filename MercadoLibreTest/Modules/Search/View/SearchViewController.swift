@@ -10,17 +10,17 @@ import UIKit
 class SearchViewController: UIViewController, SearchViewInputProtocol {
     
     unowned var searchView: SearchView { return self.view as! SearchView }
-    unowned var searchBox: SearchBoxView { return searchView.searchBoxView }
-    unowned var searchBar: UISearchBar { return searchBox.searchBar }
     unowned var tableView: UITableView { return searchView.tableView }
     unowned var waitView: UIView { return searchView.waitView }
-
-    var presenter: SearchPresenterInputProtocol?
     
+    var searchController: UISearchController?
+    var presenter: SearchPresenterInputProtocol?
     lazy var products: [ProductModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchController = UISearchController()
+        navigationItem.searchController = searchController
         setupView()
     }
     
@@ -28,15 +28,43 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
         view = SearchView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+        setupSearchController()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
     func setupView() {
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.hidesBarsOnSwipe = true
-        searchBar.delegate = self
+        searchController?.searchBar.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func setupNavigationBar() {
+        
+        navigationItem.title = LocalizablesMercadoLibre.search
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = Colors.yellow
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+    }
+    
+    private func setupSearchController() {
+        searchController?.obscuresBackgroundDuringPresentation = false
+        searchController?.searchBar.placeholder = LocalizablesMercadoLibre.searchMercadoLibre
+        searchController?.searchBar.searchBarStyle = .default
+        searchController?.searchBar.sizeToFit()
+        searchController?.searchBar.backgroundImage = UIImage()
+        searchController?.searchBar.searchTextField.backgroundColor = .white
+        searchController?.searchBar.setValue(LocalizablesMercadoLibre.cancel, forKey: "cancelButtonText")
     }
     
     func searchItems(item: String) {

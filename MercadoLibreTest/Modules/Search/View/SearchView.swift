@@ -27,7 +27,7 @@ class SearchView: UIView {
         tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "ProducTableViewCell")
         
         addSubViewsAndActiveAutoLayout([contentView])
-        contentView.addSubViewsAndActiveAutoLayout([searchBoxView, tableView, waitView])
+        contentView.addSubViewsAndActiveAutoLayout([tableView, waitView])
         waitView.addSubViewsAndActiveAutoLayout([waitImage])
         
         tableView.isHidden = true
@@ -36,23 +36,12 @@ class SearchView: UIView {
     private func setupConstraints() {
         let margins: UILayoutGuide = safeAreaLayoutGuide
         contentViewConstraint(margins: margins)
-        searchBoxConstraint()
-        tableViewConstraint()
-        waitViewConstraint()
+        tableViewConstraint(margins: margins)
+        waitViewConstraint(margins: margins)
         waitImageConstraint()
     }
     
     // MARK: CONSTRAINTS
-    
-    private func searchBoxConstraint() {
-        
-        NSLayoutConstraint.activate([
-            searchBoxView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Dimensions.Margin.small),
-            searchBoxView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Dimensions.zero),
-            searchBoxView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Dimensions.zero),
-            searchBoxView.heightAnchor.constraint(equalToConstant: 80)
-        ])
-    }
     
     private func contentViewConstraint(margins: UILayoutGuide) {
         NSLayoutConstraint.activate([
@@ -63,18 +52,18 @@ class SearchView: UIView {
         ])
     }
     
-    private func tableViewConstraint() {
+    private func tableViewConstraint(margins: UILayoutGuide) {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: searchBoxView.bottomAnchor, constant: Dimensions.Margin.medium),
+            tableView.topAnchor.constraint(equalTo: margins.topAnchor, constant: Dimensions.Margin.medium),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Dimensions.NegativeMargin.medium),
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Dimensions.zero),
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Dimensions.zero)
         ])
     }
     
-    private func waitViewConstraint() {
+    private func waitViewConstraint(margins: UILayoutGuide) {
         NSLayoutConstraint.activate([
-            waitView.topAnchor.constraint(equalTo: searchBoxView.bottomAnchor, constant: Dimensions.Margin.medium),
+            waitView.topAnchor.constraint(equalTo: margins.topAnchor, constant: Dimensions.Margin.medium),
             waitView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Dimensions.NegativeMargin.medium),
             waitView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Dimensions.zero),
             waitView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Dimensions.zero)
@@ -98,13 +87,6 @@ class SearchView: UIView {
         return view
     }()
     
-    lazy var searchBoxView: SearchBoxView = {
-        let view = SearchBoxView()
-        view.backgroundColor = .yellow
-        
-        return view
-    }()
-    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         
@@ -122,5 +104,14 @@ class SearchView: UIView {
         imageView.image = UIImage(named: "mercadoLibre")
         imageView.contentMode = .scaleAspectFit
         return imageView
+    }()
+    
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.searchBarStyle = .default
+        searchBar.sizeToFit()
+        searchBar.backgroundImage = UIImage()
+        searchBar.searchTextField.backgroundColor = .white
+        return searchBar
     }()
 }

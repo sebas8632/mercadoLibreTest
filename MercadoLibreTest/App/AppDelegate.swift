@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let navigation: UINavigationController = UINavigationController()
-        navigation.navigationBar.backgroundColor = .yellow
+        navigation.navigationBar.backgroundColor = Colors.yellow
         let searchView: SearchViewController = SearchRouter.createModule()
 
         navigation.viewControllers = [searchView]

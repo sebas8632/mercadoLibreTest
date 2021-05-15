@@ -1,0 +1,11 @@
+/* 
+  Localizables.strings
+  MercadoLibreTest
+
+  Created by Juan Sebastian Florez Saavedra on 15/05/21.
+  
+*/
+
+"search" = "Search";
+"search_mercado_libre" = "Search in Mercado Libre";
+"cancel" = "Cancel";
