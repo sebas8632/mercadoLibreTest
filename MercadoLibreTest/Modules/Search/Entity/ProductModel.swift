@@ -12,7 +12,7 @@ struct ProductModel: Codable {
     var identifier: String
     var siteId: String
     var name: String
-    var price: Int
+    var price: Double
     var currency: String
     var address: AddressModel
     var attributes: [AttributeModel]

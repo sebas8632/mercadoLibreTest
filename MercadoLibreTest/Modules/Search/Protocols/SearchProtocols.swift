@@ -38,11 +38,6 @@ protocol SearchViewInputProtocol: class {
     func presentLoader()
     
     ///
-    /// Function to hide the loader.
-    ///
-    func hideLoader()
-    
-    ///
     /// Function to show an specific error.
     /// - Parameter error:
     ///

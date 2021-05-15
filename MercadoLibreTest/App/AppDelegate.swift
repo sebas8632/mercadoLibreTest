@@ -14,9 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let searchView: SearchViewController = SearchRouter.createModule()
         
-        window?.rootViewController = searchView
+        let navigation: UINavigationController = UINavigationController()
+        navigation.navigationBar.backgroundColor = .yellow
+        let searchView: SearchViewController = SearchRouter.createModule()
+
+        navigation.viewControllers = [searchView]
+        
+        window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         return true
     }

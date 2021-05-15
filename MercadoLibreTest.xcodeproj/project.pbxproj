@@ -28,14 +28,22 @@
 		B13B8C76264E02B700FC74F9 /* MockSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C75264E02B700FC74F9 /* MockSearchView.swift */; };
 		B13B8C7C264E033500FC74F9 /* MockSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C7B264E033500FC74F9 /* MockSearchRouter.swift */; };
 		B13B8C80264E0A0E00FC74F9 /* SearchViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C7F264E0A0E00FC74F9 /* SearchViewTest.swift */; };
+		B13B8C8A264E20D600FC74F9 /* SearchBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8C89264E20D600FC74F9 /* SearchBoxView.swift */; };
+		B13B8CA9264E514F00FC74F9 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8CA8264E514F00FC74F9 /* ProductTableViewCell.swift */; };
+		B13B8CB2264E528600FC74F9 /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B8CB1264E528600FC74F9 /* Double+extension.swift */; };
+		B153E686264F6A9A009B1125 /* JSFSNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */; };
+		B153E687264F6A9A009B1125 /* JSFSNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B153E688264F6A9A009B1125 /* JSFSUIModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C6264A586B00F43F5A /* JSFSUIModule.framework */; };
+		B153E689264F6A9A009B1125 /* JSFSUIModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C6264A586B00F43F5A /* JSFSUIModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B153E68E264F6B53009B1125 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153E68D264F6B53009B1125 /* Kingfisher.framework */; };
+		B153E68F264F6B53009B1125 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B153E68D264F6B53009B1125 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B153E693264F7A82009B1125 /* ImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153E692264F7A82009B1125 /* ImageView+extension.swift */; };
+		B153E697264F7E37009B1125 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153E696264F7E37009B1125 /* SkeletonView.framework */; };
+		B153E698264F7E37009B1125 /* SkeletonView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B153E696264F7E37009B1125 /* SkeletonView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1BBE48E264A569B00F43F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE48D264A569B00F43F5A /* AppDelegate.swift */; };
 		B1BBE497264A569D00F43F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BBE496264A569D00F43F5A /* Assets.xcassets */; };
 		B1BBE49A264A569D00F43F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BBE498264A569D00F43F5A /* LaunchScreen.storyboard */; };
 		B1BBE4B0264A569E00F43F5A /* MercadoLibreTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE4AF264A569E00F43F5A /* MercadoLibreTestUITests.swift */; };
-		B1BBE4C7264A586B00F43F5A /* JSFSNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */; };
-		B1BBE4C8264A586B00F43F5A /* JSFSNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1BBE4C9264A586B00F43F5A /* JSFSUIModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C6264A586B00F43F5A /* JSFSUIModule.framework */; };
-		B1BBE4CA264A586B00F43F5A /* JSFSUIModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1BBE4C6264A586B00F43F5A /* JSFSUIModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,14 +64,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B1BBE4CB264A586B00F43F5A /* Embed Frameworks */ = {
+		B153E68A264F6A9A009B1125 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B1BBE4CA264A586B00F43F5A /* JSFSUIModule.framework in Embed Frameworks */,
-				B1BBE4C8264A586B00F43F5A /* JSFSNetwork.framework in Embed Frameworks */,
+				B153E689264F6A9A009B1125 /* JSFSUIModule.framework in Embed Frameworks */,
+				B153E68F264F6B53009B1125 /* Kingfisher.framework in Embed Frameworks */,
+				B153E698264F7E37009B1125 /* SkeletonView.framework in Embed Frameworks */,
+				B153E687264F6A9A009B1125 /* JSFSNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +102,12 @@
 		B13B8C75264E02B700FC74F9 /* MockSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchView.swift; sourceTree = "<group>"; };
 		B13B8C7B264E033500FC74F9 /* MockSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRouter.swift; sourceTree = "<group>"; };
 		B13B8C7F264E0A0E00FC74F9 /* SearchViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTest.swift; sourceTree = "<group>"; };
+		B13B8C89264E20D600FC74F9 /* SearchBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBoxView.swift; sourceTree = "<group>"; };
+		B13B8CA8264E514F00FC74F9 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		B13B8CB1264E528600FC74F9 /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
+		B153E68D264F6B53009B1125 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		B153E692264F7A82009B1125 /* ImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+extension.swift"; sourceTree = "<group>"; };
+		B153E696264F7E37009B1125 /* SkeletonView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkeletonView.framework; path = Carthage/Build/iOS/SkeletonView.framework; sourceTree = "<group>"; };
 		B1BBE48A264A569B00F43F5A /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BBE48D264A569B00F43F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BBE496264A569D00F43F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,8 +127,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1BBE4C9264A586B00F43F5A /* JSFSUIModule.framework in Frameworks */,
-				B1BBE4C7264A586B00F43F5A /* JSFSNetwork.framework in Frameworks */,
+				B153E688264F6A9A009B1125 /* JSFSUIModule.framework in Frameworks */,
+				B153E68E264F6B53009B1125 /* Kingfisher.framework in Frameworks */,
+				B153E697264F7E37009B1125 /* SkeletonView.framework in Frameworks */,
+				B153E686264F6A9A009B1125 /* JSFSNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +237,7 @@
 		B13B8BF4264CB50400FC74F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8C9D264E43ED00FC74F9 /* Components */,
 				B13B8C13264CC4EB00FC74F9 /* SearchViewController.swift */,
 				B13B8C1B264CCD8E00FC74F9 /* SearchView.swift */,
 			);
@@ -378,6 +397,24 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		B13B8C9D264E43ED00FC74F9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8C89264E20D600FC74F9 /* SearchBoxView.swift */,
+				B13B8CA8264E514F00FC74F9 /* ProductTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B13B8CB0264E526D00FC74F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B13B8CB1264E528600FC74F9 /* Double+extension.swift */,
+				B153E692264F7A82009B1125 /* ImageView+extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B1BBE481264A569B00F43F5A = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +439,7 @@
 		B1BBE48C264A569B00F43F5A /* MercadoLibreTest */ = {
 			isa = PBXGroup;
 			children = (
+				B13B8CB0264E526D00FC74F9 /* Utils */,
 				B1BBE49B264A569D00F43F5A /* Info.plist */,
 				B13B8BEB264CB49B00FC74F9 /* App */,
 				B13B8BEC264CB4BA00FC74F9 /* Modules */,
@@ -430,6 +468,8 @@
 		B1BBE4C4264A586A00F43F5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B153E696264F7E37009B1125 /* SkeletonView.framework */,
+				B153E68D264F6B53009B1125 /* Kingfisher.framework */,
 				B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */,
 				B1BBE4C6264A586B00F43F5A /* JSFSUIModule.framework */,
 			);
@@ -447,7 +487,7 @@
 				B1BBE487264A569B00F43F5A /* Frameworks */,
 				B1BBE488264A569B00F43F5A /* Resources */,
 				B1BBE4C0264A56AB00F43F5A /* ShellScript */,
-				B1BBE4CB264A586B00F43F5A /* Embed Frameworks */,
+				B153E68A264F6A9A009B1125 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -588,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B13B8C65264DBADA00FC74F9 /* SearchService.swift in Sources */,
+				B13B8CB2264E528600FC74F9 /* Double+extension.swift in Sources */,
 				B13B8C08264CC00E00FC74F9 /* SearchRouter.swift in Sources */,
 				B13B8C14264CC4EB00FC74F9 /* SearchViewController.swift in Sources */,
 				B13B8C2C264CE18500FC74F9 /* ResultModel.swift in Sources */,
@@ -596,10 +637,13 @@
 				B13B8C10264CC23000FC74F9 /* SearchPresenter.swift in Sources */,
 				B13B8C22264CD59200FC74F9 /* SearchRemoteDataManager.swift in Sources */,
 				B13B8C1C264CCD8E00FC74F9 /* SearchView.swift in Sources */,
+				B153E693264F7A82009B1125 /* ImageView+extension.swift in Sources */,
 				B13B8C3A264CE4A200FC74F9 /* ProductModel.swift in Sources */,
 				B13B8C28264CD5C200FC74F9 /* SearchLocalDataManager.swift in Sources */,
 				B1BBE48E264A569B00F43F5A /* AppDelegate.swift in Sources */,
 				B13B8BF7264CB53000FC74F9 /* SearchProtocols.swift in Sources */,
+				B13B8CA9264E514F00FC74F9 /* ProductTableViewCell.swift in Sources */,
+				B13B8C8A264E20D600FC74F9 /* SearchBoxView.swift in Sources */,
 				B13B8C0C264CC08300FC74F9 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
