@@ -77,10 +77,6 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
         presenter?.goToProductDetail(from: self, product: product)
     }
     
-    func presentLoader() {
-        // TODO
-    }
-    
     func showError(error: String) {
         print("DESDE LA VISTA \(error)")
         

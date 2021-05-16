@@ -10,7 +10,6 @@ import JSFSNetwork
 
 class SearchInteractor: SearchInteractorInputProtocol {
     var presenter: SearchInteractorOutputProtocol?
-    var localDataManager: SearchLocalDataManagerProtocol?
     var remoteDataManager: SearchRemoteDataManagerInputProtocol?
     
     func searchProducts(name: String) {

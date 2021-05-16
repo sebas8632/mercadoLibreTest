@@ -33,11 +33,6 @@ protocol SearchViewInputProtocol: class {
     func selectItem(product: ProductModel)
     
     ///
-    /// Function to show the loader.
-    ///
-    func presentLoader()
-    
-    ///
     /// Function to show an specific error.
     /// - Parameter error:
     ///
@@ -54,16 +49,6 @@ protocol SearchPresenterInputProtocol: class {
     var router: SearchRouterProtocol? { get set }
     
     // MARK: FUNCTIONS
-    
-    ///
-    /// This function is used when the view has been loaded.
-    ///
-    func viewDidLoad()
-    
-    ///
-    /// This functions is used when the view will appear.
-    ///
-    func viewWillAppear()
     
     ///
     /// Function to search products.
@@ -98,7 +83,6 @@ protocol SearchInteractorInputProtocol: class {
     
     // MARK: VARIABLES
     var presenter: SearchInteractorOutputProtocol? { get set }
-    var localDataManager: SearchLocalDataManagerProtocol? { get set }
     var remoteDataManager: SearchRemoteDataManagerInputProtocol? { get set }
     
     // MARK: FUNCTIONS
@@ -121,11 +105,6 @@ protocol SearchInteractorOutputProtocol {
     /// - Parameters error: error from interactor.
     ///
     func didRetrievedError(error: String)
-    
-}
-
-protocol SearchLocalDataManagerProtocol: class {
-    // TODO
     
 }
 

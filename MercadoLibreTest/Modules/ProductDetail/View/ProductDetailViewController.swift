@@ -89,11 +89,4 @@ class ProductDetailViewController: UIViewController, ProductDetailViewProtocol {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = Colors.yellow
     }
-    
-}
-
-extension ProductDetailViewController: ProductDetailPresenterOutputProtocol {
-    func hideSkeleton() {
-        // TODO
-    }
 }

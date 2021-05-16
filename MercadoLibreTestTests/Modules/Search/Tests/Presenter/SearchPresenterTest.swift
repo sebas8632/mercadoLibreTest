@@ -35,14 +35,6 @@ class SearchPresenterTest: XCTestCase {
         sut = nil
         
     }
-
-    func testViewDidLoad() {
-        // TODO
-    }
-    
-    func testViewDidAppear() {
-        // TODO
-    }
     
     func testSearchProducts() {
         // Given

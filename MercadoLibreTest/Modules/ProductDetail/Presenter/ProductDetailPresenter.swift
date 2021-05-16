@@ -9,7 +9,7 @@ import Foundation
 
 class ProductDetailPresenter: ProductDetailPresenterInputProtocol {
     
-    var view: ProductDetailPresenterOutputProtocol?
+    var view: ProductDetailViewController?
     var router: ProductDetailRouterProtocol?
     
     func getState(product: ProductModel) -> String {

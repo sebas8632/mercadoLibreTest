@@ -11,11 +11,12 @@ struct SearchPresenterCalls {
     var didRetrieveProducts: Bool = false
     var searchProducts: Bool = false
     var didRetrieveError: Bool = false
+    var didGoToProductDetail: Bool = false
 }
 
 @testable import MercadoLibreTest
 class MockSearchPresenter: SearchPresenterInputProtocol {
-    
+
     var view: SearchPresenterOutputProtocol?
     var interactor: SearchInteractorInputProtocol?
     var router: SearchRouterProtocol?
@@ -23,19 +24,14 @@ class MockSearchPresenter: SearchPresenterInputProtocol {
     lazy var arrayProducts: [ProductModel] = []
     lazy var errorMessage: String = ""
     
-    func viewDidLoad() {
-        // TODo
-    }
-
-    func viewWillAppear() {
-        // TODO
-    }
-    
     func searchProducts(name: String) {
         calls.searchProducts = true
         interactor?.searchProducts(name: name)
     }
  
+    func goToProductDetail(from: SearchViewInputProtocol, product: ProductModel) {
+        calls.didGoToProductDetail = true
+    }
 }
 
 extension MockSearchPresenter: SearchInteractorOutputProtocol {

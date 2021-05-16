@@ -8,19 +8,19 @@
 import Foundation
 
 struct SearchRouterCalls {
-    var didPushToItemDetail: Bool = false
+    var didPushToProductDetail: Bool = false
+    var didCreateModule: Bool = false
 }
 @testable import MercadoLibreTest
 class MockSearchRouter: SearchRouterProtocol {
     
+    lazy var calls: SearchRouterCalls = SearchRouterCalls()
+    func pushToProductDetail(from view: SearchViewInputProtocol, product: ProductModel) {
+        calls.didPushToProductDetail = true
+    }
+    
     static func createModule() -> SearchViewController {
-        // TODO
+        calls.didCreateModule = true
         return SearchViewController()
     }
-    
-    func pushToItemDetail() -> Any {
-        // TODO
-        return 0
-    }
-    
 }

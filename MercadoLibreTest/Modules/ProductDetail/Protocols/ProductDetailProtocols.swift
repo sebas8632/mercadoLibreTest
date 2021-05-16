@@ -31,7 +31,7 @@ protocol ProductDetailViewProtocol: class {
 protocol ProductDetailPresenterInputProtocol: class {
    
     // MARK: VARIABLES
-    var view: ProductDetailPresenterOutputProtocol? { get set }
+    var view: ProductDetailViewController? { get set }
     var router: ProductDetailRouterProtocol? { get set }
     
     // MARK: FUNCTIONS
@@ -60,10 +60,6 @@ protocol ProductDetailPresenterInputProtocol: class {
     ///
     func getUbication(product: ProductModel) -> String
         
-}
-
-protocol ProductDetailPresenterOutputProtocol {
-
 }
 
 protocol ProductDetailRouterProtocol {

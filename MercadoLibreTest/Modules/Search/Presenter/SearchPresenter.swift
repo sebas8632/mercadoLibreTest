@@ -13,14 +13,6 @@ class SearchPresenter: SearchPresenterInputProtocol {
     var interactor: SearchInteractorInputProtocol?
     var router: SearchRouterProtocol?
     
-    func viewDidLoad() {
-        // TODO
-    }
-    
-    func viewWillAppear() {
-        // TODO
-    }
-    
     func searchProducts(name: String) {
         interactor?.searchProducts(name: name)
     }

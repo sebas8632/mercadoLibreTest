@@ -16,7 +16,6 @@ class SearchRouter: SearchRouterProtocol {
         let view: SearchViewController = SearchViewController()
         let presenter: SearchPresenterInputProtocol & SearchInteractorOutputProtocol = SearchPresenter()
         let interactor: SearchInteractorInputProtocol & SearchRemoteDataManagerOutputProtocol = SearchInteractor()
-        let localDataManager: SearchLocalDataManagerProtocol = SearchLocalDataManager()
         let remoteDataManager: SearchRemoteDataManagerInputProtocol = SearchRemoteDataManager()
         let router: SearchRouterProtocol = SearchRouter()
         
@@ -24,7 +23,6 @@ class SearchRouter: SearchRouterProtocol {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        interactor.localDataManager = localDataManager
         interactor.remoteDataManager = remoteDataManager
         interactor.presenter = presenter
         remoteDataManager.sessionProvider = URLSessionProvider()
