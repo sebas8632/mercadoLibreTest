@@ -9,15 +9,12 @@
 "search" = "Search";
 "search_mercado_libre" = "Search in Mercado Libre";
 "cancel" = "Cancel";
-"search_mercado_libre_param" = "Search %@";
-
-
 
 // MARK: Product strings
 
 "used" = "Used";
 "new" = "New";
-"price_facilities" = "en %@ cuotas de $%@";
+"price_facilities" = "in %@ installments of $%@";
 "stock_available" = "Available Stock";
 "ubication" = "Ubication";
 "unit_stock" = "%@ available";

@@ -93,7 +93,7 @@ extension SearchViewController: SearchPresenterOutputProtocol {
         self.products = products
         tableView.reloadData()
         
-        UIView.animate(withDuration: 1, animations: { [weak self] in
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
             self?.waitView.alpha = 0
         }) { _ in
             self.waitView.isHidden = true

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class ProductDetailViewController: UIViewController, ProductDetailViewProtocol {
   
@@ -17,6 +18,12 @@ class ProductDetailViewController: UIViewController, ProductDetailViewProtocol {
     unowned var installments: UILabel { return productDetailView.productInstallments }
     unowned var stockValue: UILabel { return productDetailView.stockValue }
     unowned var ubication: UILabel { return productDetailView.ubicationValue }
+    unowned var stackPrice: UIStackView { return productDetailView.stackPrice }
+    unowned var stackStock: UIStackView { return productDetailView.stackStock }
+    unowned var stackInfo: UIStackView { return productDetailView.stackInfo }
+    unowned var stockMessage: UILabel { return productDetailView.stockMessage}
+    unowned var infoMessage: UILabel { return productDetailView.infoMessage}
+    unowned var ubicationMessage: UILabel { return productDetailView.ubicationMessage}
 
     var presenter: ProductDetailPresenterInputProtocol?
     var product: ProductModel?
@@ -24,6 +31,7 @@ class ProductDetailViewController: UIViewController, ProductDetailViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        configurateSkeleton()
     }
     
     override func loadView() {
@@ -33,7 +41,7 @@ class ProductDetailViewController: UIViewController, ProductDetailViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.title = product?.name
-        setupView()
+        showSkeleton()
     }
     
     func setupView() {
@@ -49,7 +57,28 @@ class ProductDetailViewController: UIViewController, ProductDetailViewProtocol {
     }
     
     func showSkeleton() {
-        // TODO
+        view.showAnimatedSkeleton(usingColor: .skeletonDefault, animation: nil, transition: .crossDissolve(0.25))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.setupView()
+            self?.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.5))
+        }    }
+    
+    private func configurateSkeleton() {
+        productDetailView.isSkeletonable = true
+        state.isSkeletonable = true
+        name.isSkeletonable = true
+        price.isSkeletonable = true
+        installments.isSkeletonable = true
+        stockValue.isSkeletonable = true
+        ubication.isSkeletonable = true
+        image.isSkeletonable = true
+        stackPrice.isSkeletonable = true
+        stackStock.isSkeletonable = true
+        stackInfo.isSkeletonable = true
+        infoMessage.isSkeletonable = true
+        stockMessage.isSkeletonable = true
+        ubicationMessage.isSkeletonable = true
+        
     }
     
     private func setupNavigationBar() {

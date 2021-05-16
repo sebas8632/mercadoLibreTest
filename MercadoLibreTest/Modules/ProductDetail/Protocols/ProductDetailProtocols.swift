@@ -63,13 +63,7 @@ protocol ProductDetailPresenterInputProtocol: class {
 }
 
 protocol ProductDetailPresenterOutputProtocol {
-    
-    // MARK: FUNCTIONS
 
-    ///
-    /// Function to hide skeleton when the data has been charged.
-    ///
-    func hideSkeleton()
 }
 
 protocol ProductDetailRouterProtocol {
