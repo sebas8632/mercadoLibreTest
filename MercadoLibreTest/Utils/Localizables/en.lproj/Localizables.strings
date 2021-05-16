@@ -9,3 +9,18 @@
 "search" = "Search";
 "search_mercado_libre" = "Search in Mercado Libre";
 "cancel" = "Cancel";
+"search_mercado_libre_param" = "Search %@";
+
+
+
+// MARK: Product strings
+
+"used" = "Used";
+"new" = "New";
+"price_facilities" = "en %@ cuotas de $%@";
+"stock_available" = "Available Stock";
+"ubication" = "Ubication";
+"unit_stock" = "%@ available";
+"info_seller" = "Information about the seller";
+"state" = " %@ | %@ sold";
+"ubication_value" = "%@, %@";

@@ -8,3 +8,17 @@
 "search" = "Búsqueda";
 "search_mercado_libre" = "Buscar en Mercado Libre";
 "cancel" = "Cancelar";
+"search_mercado_libre_param" = "Search %@";
+
+// MARK: Product strings
+
+"used" = "Usado";
+"new" = "Nuevo";
+"sold" = "Vendidos";
+"price_facilities" = "in %d installments of $%@";
+"stock_available" = "Stock disponible";
+"ubication" = "Ubicación";
+"unit_stock" = "%@ disponibles";
+"info_seller" = "Información sobre el vendedor";
+"state" = " %@ | %@ vendido";
+"ubication_value" = "%@, %@";

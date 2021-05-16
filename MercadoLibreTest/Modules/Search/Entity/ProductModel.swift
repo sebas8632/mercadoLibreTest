@@ -18,6 +18,9 @@ struct ProductModel: Codable {
     var attributes: [AttributeModel]
     var condition: String
     var thumbnail: String
+    var soldQuantity: Int
+    var availableQuantity: Int
+    var installments: Installments?
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
@@ -29,6 +32,18 @@ struct ProductModel: Codable {
         case attributes
         case condition
         case thumbnail
+        case soldQuantity = "sold_quantity"
+        case availableQuantity = "available_quantity"
+        case installments
+    }
+    
+    func getState() -> String {
+        switch condition {
+        case "new":
+            return "new".localizedString()
+        default:
+            return "used".localizedString()
+        }
     }
 }
 
@@ -53,5 +68,15 @@ struct AttributeModel: Codable {
         case value = "value_name"
         case groupId = "attribute_group_id"
         case groupName = "attribute_group_name"
+    }
+}
+
+struct Installments: Codable {
+    var quantity: Int?
+    var amount: Double?
+    
+    enum CodingKeys: String, CodingKey {
+        case quantity
+        case amount
     }
 }

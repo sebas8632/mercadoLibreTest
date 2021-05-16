@@ -7,6 +7,7 @@
 
 import Foundation
 import JSFSNetwork
+import UIKit
 
 class SearchRouter: SearchRouterProtocol {
     
@@ -32,9 +33,10 @@ class SearchRouter: SearchRouterProtocol {
         return view
     }
     
-    func pushToItemDetail() -> Any {
-        // TODO
-        return false
+    func pushToProductDetail(from view: SearchViewInputProtocol, product: ProductModel) {
+        let viewController = view as? SearchViewController
+        let productDetailView: ProductDetailViewController = ProductDetailRouter.createModule(product: product)
+        viewController?.navigationController?.pushViewController(productDetailView, animated: true)
+        
     }
-    
 }

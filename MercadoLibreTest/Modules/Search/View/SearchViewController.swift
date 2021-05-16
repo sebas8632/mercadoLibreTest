@@ -40,12 +40,14 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     
     func setupView() {
         searchController?.searchBar.delegate = self
+        tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     private func setupNavigationBar() {
         
-        navigationItem.title = LocalizablesMercadoLibre.search
+        navigationItem.title = LocalizablesMercadoLibre.SearchStrings.search
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
@@ -59,20 +61,20 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     
     private func setupSearchController() {
         searchController?.obscuresBackgroundDuringPresentation = false
-        searchController?.searchBar.placeholder = LocalizablesMercadoLibre.searchMercadoLibre
+        searchController?.searchBar.placeholder = LocalizablesMercadoLibre.SearchStrings.searchMercadoLibre
         searchController?.searchBar.searchBarStyle = .default
         searchController?.searchBar.sizeToFit()
         searchController?.searchBar.backgroundImage = UIImage()
         searchController?.searchBar.searchTextField.backgroundColor = .white
-        searchController?.searchBar.setValue(LocalizablesMercadoLibre.cancel, forKey: "cancelButtonText")
+        searchController?.searchBar.setValue(LocalizablesMercadoLibre.SearchStrings.cancel, forKey: "cancelButtonText")
     }
     
     func searchItems(item: String) {
         self.presenter?.searchProducts(name: item)
     }
     
-    func selectItem() {
-        // TODO
+    func selectItem(product: ProductModel) {
+        presenter?.goToProductDetail(from: self, product: product)
     }
     
     func presentLoader() {
@@ -141,20 +143,14 @@ extension SearchViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProducTableViewCell", for: indexPath) as! ProductTableViewCell
         let product = products[indexPath.row]
         
-        cell.product = ProductModel(identifier: product.identifier,
-                                    siteId: product.siteId,
-                                    name: product.name,
-                                    price: product.price,
-                                    currency: product.currency,
-                                    address: product.address,
-                                    attributes: product.attributes,
-                                    condition: product.condition,
-                                    thumbnail: product.thumbnail)
-        
+        cell.product = product
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+}
+
+extension SearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product: ProductModel = products[indexPath.row]
+        selectItem(product: product)
     }
 }

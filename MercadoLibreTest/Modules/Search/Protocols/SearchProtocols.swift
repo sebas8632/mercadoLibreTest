@@ -30,7 +30,7 @@ protocol SearchViewInputProtocol: class {
     ///
     /// This function select the specific item to get the detail.
     ///
-    func selectItem()
+    func selectItem(product: ProductModel)
     
     ///
     /// Function to show the loader.
@@ -70,6 +70,13 @@ protocol SearchPresenterInputProtocol: class {
     /// - Parameter name: Name of the product.
     ///
     func searchProducts(name: String)
+    
+    ///
+    /// Function to go to the product detail module.
+    /// - Parameters from. View from the navigacion comes.
+    /// - Parameters product. Product model with data to show on product detail view.
+    ///
+    func goToProductDetail(from: SearchViewInputProtocol, product: ProductModel)
 }
 
 protocol SearchPresenterOutputProtocol {
@@ -166,5 +173,5 @@ protocol SearchRouterProtocol: class {
     ///
     /// Function to push the app to the next View.
     ///
-    func pushToItemDetail() -> Any
+    func pushToProductDetail(from view: SearchViewInputProtocol, product: ProductModel)
 }

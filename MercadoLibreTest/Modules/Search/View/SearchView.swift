@@ -29,7 +29,6 @@ class SearchView: UIView {
         addSubViewsAndActiveAutoLayout([contentView])
         contentView.addSubViewsAndActiveAutoLayout([tableView, waitView])
         waitView.addSubViewsAndActiveAutoLayout([waitImage])
-        
         tableView.isHidden = true
     }
     

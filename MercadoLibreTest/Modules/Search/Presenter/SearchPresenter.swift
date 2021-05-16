@@ -25,6 +25,10 @@ class SearchPresenter: SearchPresenterInputProtocol {
         interactor?.searchProducts(name: name)
     }
     
+    func goToProductDetail(from: SearchViewInputProtocol, product: ProductModel) {
+        router?.pushToProductDetail(from: from, product: product)
+    }
+    
 }
 
 extension SearchPresenter: SearchInteractorOutputProtocol {

@@ -68,7 +68,7 @@ class ProductTableViewCell: UITableViewCell {
     
     private lazy var productThumbnail: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
