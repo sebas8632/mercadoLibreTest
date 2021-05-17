@@ -47,6 +47,8 @@
 		B153E723265074BA009B1125 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153E722265074BA009B1125 /* ProductDetailPresenter.swift */; };
 		B153E72726507529009B1125 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153E72626507529009B1125 /* ProductDetailRouter.swift */; };
 		B153E72B26508997009B1125 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153E72A26508997009B1125 /* ProductDetailView.swift */; };
+		B1ACE2572652343B00A045D3 /* JSFSPopUps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACE2562652343B00A045D3 /* JSFSPopUps.framework */; };
+		B1ACE2582652343B00A045D3 /* JSFSPopUps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACE2562652343B00A045D3 /* JSFSPopUps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1BBE48E264A569B00F43F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE48D264A569B00F43F5A /* AppDelegate.swift */; };
 		B1BBE497264A569D00F43F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BBE496264A569D00F43F5A /* Assets.xcassets */; };
 		B1BBE4B0264A569E00F43F5A /* MercadoLibreTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBE4AF264A569E00F43F5A /* MercadoLibreTestUITests.swift */; };
@@ -76,6 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B1ACE2582652343B00A045D3 /* JSFSPopUps.framework in Embed Frameworks */,
 				B153E689264F6A9A009B1125 /* JSFSUIModule.framework in Embed Frameworks */,
 				B153E68F264F6B53009B1125 /* Kingfisher.framework in Embed Frameworks */,
 				B153E698264F7E37009B1125 /* SkeletonView.framework in Embed Frameworks */,
@@ -122,6 +125,7 @@
 		B153E722265074BA009B1125 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		B153E72626507529009B1125 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		B153E72A26508997009B1125 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		B1ACE2562652343B00A045D3 /* JSFSPopUps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSFSPopUps.framework; path = Carthage/Build/iOS/JSFSPopUps.framework; sourceTree = "<group>"; };
 		B1BBE48A264A569B00F43F5A /* MercadoLibreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BBE48D264A569B00F43F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BBE496264A569D00F43F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1ACE2572652343B00A045D3 /* JSFSPopUps.framework in Frameworks */,
 				B153E688264F6A9A009B1125 /* JSFSUIModule.framework in Frameworks */,
 				B153E68E264F6B53009B1125 /* Kingfisher.framework in Frameworks */,
 				B153E697264F7E37009B1125 /* SkeletonView.framework in Frameworks */,
@@ -551,6 +556,7 @@
 		B1BBE4C4264A586A00F43F5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1ACE2562652343B00A045D3 /* JSFSPopUps.framework */,
 				B153E696264F7E37009B1125 /* SkeletonView.framework */,
 				B153E68D264F6B53009B1125 /* Kingfisher.framework */,
 				B1BBE4C5264A586B00F43F5A /* JSFSNetwork.framework */,

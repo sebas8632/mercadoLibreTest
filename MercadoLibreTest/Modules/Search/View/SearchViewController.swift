@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import JSFSPopUps
 class SearchViewController: UIViewController, SearchViewInputProtocol {
     
     unowned var searchView: SearchView { return self.view as! SearchView }
@@ -46,7 +46,7 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     }
     
     private func setupNavigationBar() {
-        
+        navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.title = LocalizablesMercadoLibre.SearchStrings.search
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -60,6 +60,8 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     }
     
     private func setupSearchController() {
+        searchController?.hidesNavigationBarDuringPresentation = false
+
         searchController?.obscuresBackgroundDuringPresentation = false
         searchController?.searchBar.placeholder = LocalizablesMercadoLibre.SearchStrings.searchMercadoLibre
         searchController?.searchBar.searchBarStyle = .default
@@ -71,6 +73,7 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     
     func searchItems(item: String) {
         self.presenter?.searchProducts(name: item)
+
     }
     
     func selectItem(product: ProductModel) {
@@ -78,8 +81,7 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     }
     
     func showError(error: String) {
-        print("DESDE LA VISTA \(error)")
-        
+        PopUpManager.showError(error: error, from: navigationController!)
     }
     
 }

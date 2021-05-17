@@ -12,7 +12,7 @@ class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
     var interactor: SearchRemoteDataManagerOutputProtocol?
     
     var sessionProvider: ProviderProtocol?
-
+    
     func searchProducts(name: String) {
         sessionProvider?.request(type: ResultModel.self, service: SearchService.search(query: name), completion: { [weak self] (result) in
             switch result {

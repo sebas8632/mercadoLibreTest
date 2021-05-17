@@ -1,6 +1,7 @@
 #personal frameworks
 github "https://github.com/sebas8632/JSFSNetwork" == 1.0.7
 github "https://github.com/sebas8632/JSFSUIModule" == 1.0.5
+github "https://github.com/sebas8632/JSFSPopUps"
 
 #third party libraries.
 github "onevcat/Kingfisher" ~> 6.0
