@@ -48,7 +48,7 @@ class SearchInteractorTest: XCTestCase {
         // Then
         XCTAssertTrue(mockRemoteDataManager.calls.searchProducts)
         XCTAssertTrue(mockPresenter.calls.didRetrieveError)
-        XCTAssertEqual(mockPresenter.errorMessage, "Has ocurred an error")
+        XCTAssertNotNil(mockPresenter.error)
     }
 
 }

@@ -19,7 +19,7 @@ class MockSearchView: SearchPresenterOutputProtocol {
     lazy var calls: SearchViewCalls = SearchViewCalls()
     var products: [ProductModel] = []
     
-    lazy var errorMessage: String = ""
+    var error: Error?
     
     func didRetrieveProducts(products: [ProductModel]) {
         calls.didRetrieveProductsCall = true
@@ -27,8 +27,8 @@ class MockSearchView: SearchPresenterOutputProtocol {
         
     }
     
-    func didRetrievedError(error: String) {
+    func didRetrievedError(error: Error) {
         calls.didRetrieveError = true
-        errorMessage = error
+        self.error = error
     }
 }

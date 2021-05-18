@@ -26,16 +26,15 @@ struct LocalizablesMercadoLibre {
         static var ubicationValue: String = "ubication_value".localizedString()
     }
     
-    struct Error {
-        struct NetworkError {
-            static var unknownError: String = "unknown".localizedString()
-            static var serverError: String = "server_error".localizedString()
-        }
-        
-        struct ValidationError {
-            static var tooShortError: String = "too_short".localizedString()
-            static var isEmptyError: String = "is_empty".localizedString()
-        }
+    
+    struct NetworkError {
+        static var unknownError: String = "unknown".localizedString()
+        static var serverError: String = "server_error".localizedString()
+    }
+    
+    struct ValidationError {
+        static var tooShortError: String = "too_short".localizedString()
+        static var isEmptyError: String = "is_empty".localizedString()
     }
     
 }

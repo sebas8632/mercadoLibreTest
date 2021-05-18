@@ -25,7 +25,7 @@
 
 // MARK: Validation Error
 
-"too_short" = "Search should have at least 3 charecters";
+"too_short" = "Search should have at least 3 characters";
 "is_empty" = "Please, fill the field";
 
 // MARK: Network Error

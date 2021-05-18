@@ -11,9 +11,9 @@ extension ValidationError {
     func getMessage() -> String {
         switch self {
         case .empty:
-            return LocalizablesMercadoLibre.Error.ValidationError.isEmptyError
+            return LocalizablesMercadoLibre.ValidationError.isEmptyError
         case .tooShort:
-            return LocalizablesMercadoLibre.Error.ValidationError.tooShortError
+            return LocalizablesMercadoLibre.ValidationError.tooShortError
         }
     }
 }

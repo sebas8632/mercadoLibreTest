@@ -20,7 +20,7 @@ class MockSearchRouter: SearchRouterProtocol {
     }
     
     static func createModule() -> SearchViewController {
-        calls.didCreateModule = true
+        
         return SearchViewController()
     }
 }

@@ -13,9 +13,9 @@ extension NetworkError {
     func getMessage() -> String {
         switch self {
         case .serverError:
-            return LocalizablesMercadoLibre.Error.NetworkError.serverError
+            return LocalizablesMercadoLibre.NetworkError.serverError
         default:
-            return LocalizablesMercadoLibre.Error.NetworkError.unknownError
+            return LocalizablesMercadoLibre.NetworkError.unknownError
         }
     }
 }

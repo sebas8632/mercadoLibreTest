@@ -61,6 +61,6 @@ class SearchPresenterTest: XCTestCase {
         XCTAssertTrue(mockInteractor.calls.searchProductsCall)
         XCTAssertTrue(mockInteractor.calls.didRetrieveErrorCall)
         XCTAssertTrue(mockView.calls.didRetrieveError)
-        XCTAssertEqual(mockView.errorMessage, "Has ocurred an error")
+        XCTAssertNotNil(mockView.error)
     }
 }

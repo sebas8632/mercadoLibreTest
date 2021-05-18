@@ -1,5 +1,5 @@
 github "Juanpe/SkeletonView" "1.15.0"
 github "onevcat/Kingfisher" "6.3.0"
 github "sebas8632/JSFSNetwork" "1.0.7"
-github "sebas8632/JSFSPopUps" "1.0.0"
+github "sebas8632/JSFSPopUps" "1.0.2"
 github "sebas8632/JSFSUIModule" "1.0.5"

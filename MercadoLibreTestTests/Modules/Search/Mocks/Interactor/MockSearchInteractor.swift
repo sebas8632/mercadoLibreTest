@@ -17,7 +17,6 @@ struct SearchInteractorCalls {
 class MockSearchInteractor: SearchInteractorInputProtocol & SearchRemoteDataManagerOutputProtocol {
     
     var presenter: SearchInteractorOutputProtocol?
-    var localDataManager: SearchLocalDataManagerProtocol?
     var remoteDataManager: SearchRemoteDataManagerInputProtocol?
     lazy var calls: SearchInteractorCalls = SearchInteractorCalls()
     
@@ -31,8 +30,8 @@ class MockSearchInteractor: SearchInteractorInputProtocol & SearchRemoteDataMana
         presenter?.didRetrieveProducts(products: products)
     }
     
-    func didRetrievedError(error: NetworkError) {
+    func didRetrievedError(error: Error) {
         calls.didRetrieveErrorCall = true
-        presenter?.didRetrievedError(error: error.rawValue)
+        presenter?.didRetrievedError(error: error)
     }
 }

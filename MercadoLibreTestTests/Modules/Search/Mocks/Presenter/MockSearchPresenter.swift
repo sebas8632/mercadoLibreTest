@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import JSFSNetwork
 struct SearchPresenterCalls {
     var didRetrieveProducts: Bool = false
     var searchProducts: Bool = false
@@ -22,7 +22,7 @@ class MockSearchPresenter: SearchPresenterInputProtocol {
     var router: SearchRouterProtocol?
     lazy var calls: SearchPresenterCalls = SearchPresenterCalls()
     lazy var arrayProducts: [ProductModel] = []
-    lazy var errorMessage: String = ""
+    var error: Error?
     
     func searchProducts(name: String) {
         calls.searchProducts = true
@@ -35,16 +35,16 @@ class MockSearchPresenter: SearchPresenterInputProtocol {
 }
 
 extension MockSearchPresenter: SearchInteractorOutputProtocol {
-    
+
     func didRetrieveProducts(products: [ProductModel]) {
         calls.didRetrieveProducts = true
         arrayProducts = products
         view?.didRetrieveProducts(products: products)
     }
     
-    func didRetrievedError(error: String) {
+    func didRetrievedError(error: Error) {
         calls.didRetrieveError = true
-        errorMessage = error
+        self.error = error
     }
   
 }

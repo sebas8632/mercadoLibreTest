@@ -37,7 +37,8 @@ class MockSearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
                                                                      groupId: "comfort",
                                                                      groupName: "COMFORT")],
                                          condition: "Used",
-                                         thumbnail: "https://http2.mlstatic.com/D_855969-MCO45404796897_032021-I.jpg"))
+                                         thumbnail: "https://http2.mlstatic.com/D_855969-MCO45404796897_032021-I.jpg",
+                            soldQuantity: 1, availableQuantity: 1, installments: nil))
             
             products.append(ProductModel(identifier: "hkjjh",
                                          siteId: "MCO",
@@ -51,7 +52,8 @@ class MockSearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
                                                                      groupId: "comfort",
                                                                      groupName: "COMFORT")],
                                          condition: "Used",
-                                         thumbnail: "https://http2.mlstatic.com/D_855969-MCO45404796897_032021-I.jpg"))
+                                         thumbnail: "https://http2.mlstatic.com/D_855969-MCO45404796897_032021-I.jpg",
+                                         soldQuantity: 1, availableQuantity: 1, installments: nil))
             
             interactor?.didRetrieveProducts(products: products)
         }
