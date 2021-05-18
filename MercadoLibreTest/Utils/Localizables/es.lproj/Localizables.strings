@@ -21,3 +21,15 @@
 "info_seller" = "Información sobre el vendedor";
 "state" = " %@ | %@ vendido";
 "ubication_value" = "%@, %@";
+
+// MARK: Validation Error
+
+"too_short" = "La búsqueda debe tener al menos 3 caracteres";
+"is_empty" = "Por favor, llene el campo de texto.";
+
+// MARK: Network Error
+
+"server_error" = "Ha ocurrido un error inesperado, por favor intente luego.";
+"internal_error" = "Ha ocurrido un error inesperado, por favor intente luego.";
+"unknown" = "Ha ocurrido un error inesperado";
+"no_response" = "Has ocurred an error, try late";

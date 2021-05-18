@@ -14,6 +14,10 @@ class SearchPresenter: SearchPresenterInputProtocol {
     var router: SearchRouterProtocol?
     
     func searchProducts(name: String) {
+        guard name.count > 2 else {
+            view?.didRetrievedError(error: ValidationError.tooShort)
+            return
+        }
         interactor?.searchProducts(name: name)
     }
     
@@ -29,7 +33,7 @@ extension SearchPresenter: SearchInteractorOutputProtocol {
         view?.didRetrieveProducts(products: products)
     }
     
-    func didRetrievedError(error: String) {
+    func didRetrievedError(error: Error) {
         view?.didRetrievedError(error: error)
     }
 }

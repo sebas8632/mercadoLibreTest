@@ -80,8 +80,8 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
         presenter?.goToProductDetail(from: self, product: product)
     }
     
-    func showError(error: String) {
-        PopUpManager.showError(error: error, from: navigationController!)
+    func showError(error: Error) {
+        ErrorManager.manageError(error: error, from: self)
     }
     
 }
@@ -99,7 +99,7 @@ extension SearchViewController: SearchPresenterOutputProtocol {
         }        
     }
     
-    func didRetrievedError(error: String) {
+    func didRetrievedError(error: Error) {
         showError(error: error)
     }
     

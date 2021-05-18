@@ -23,7 +23,7 @@ extension SearchInteractor: SearchRemoteDataManagerOutputProtocol {
         presenter?.didRetrieveProducts(products: products)
     }
     
-    func didRetrievedError(error: NetworkError) {
-        presenter?.didRetrievedError(error: error.rawValue)
+    func didRetrievedError(error: Error) {
+        presenter?.didRetrievedError(error: error)
     }
 }

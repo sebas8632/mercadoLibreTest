@@ -36,7 +36,7 @@ protocol SearchViewInputProtocol: class {
     /// Function to show an specific error.
     /// - Parameter error:
     ///
-    func showError(error: String)
+    func showError(error: Error)
     
 }
 
@@ -76,7 +76,7 @@ protocol SearchPresenterOutputProtocol {
     /// Function to retrieve the error.
     /// - Parameters error: error from presenter.
     ///
-    func didRetrievedError(error: String)
+    func didRetrievedError(error: Error)
 }
 
 protocol SearchInteractorInputProtocol: class {
@@ -104,7 +104,7 @@ protocol SearchInteractorOutputProtocol {
     /// Function to retrieve the error.
     /// - Parameters error: error from interactor.
     ///
-    func didRetrievedError(error: String)
+    func didRetrievedError(error: Error)
     
 }
 
@@ -138,7 +138,7 @@ protocol SearchRemoteDataManagerOutputProtocol {
     /// Function to retrieve the error.
     /// - Parameters error: error from session provider.
     ///
-    func didRetrievedError(error: NetworkError)
+    func didRetrievedError(error: Error)
     
 }
 

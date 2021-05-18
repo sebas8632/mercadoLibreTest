@@ -21,3 +21,16 @@
 "info_seller" = "Information about the seller";
 "state" = " %@ | %@ sold";
 "ubication_value" = "%@, %@";
+
+
+// MARK: Validation Error
+
+"too_short" = "Search should have at least 3 charecters";
+"is_empty" = "Please, fill the field";
+
+// MARK: Network Error
+
+"server_error" = "Has ocurred a server error";
+"internal_error" = "Has ocurred an internal error";
+"unknown" = "Has ocurred an unexpected error";
+"no_response" = "Has ocurred an error, try late";
