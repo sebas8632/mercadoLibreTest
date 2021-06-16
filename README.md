@@ -1,6 +1,37 @@
-# mercadoLibreTest
 
-> mercadoLibreTest is an iOS app develop with swift and having a VIPER architecture, on it you could find a specific implementation respecting SOLID principles, Protocol-Oriented Programming and a bunch of topic related with Swift programming. In the next lines we are going to explain each part of this project.
+## Description of the problem and solution
+Mercado Libre is looking for a small but scalable app to consume its searching web services. They are providing its API Documentation to get information about products and show easily through an iOS App.
+> Solution focused on iOS(Swift) Technology.
+> mercadoLibreTest is an iOS app develop with swift and having a VIPER architecture. On it you could find a specific implementation respecting SOLID principles, Protocol-Oriented Programming and a bunch of topic related with Swift programming. In the next lines we are going to explain each part of this project.
+
+## Technical Choices
+In this section i'm going to explain briefly why i choose this architecture, principles, libraries or frameworks.
+
+1. the architecture i've choose is VIPER, because allow us to create and testable and scalable app, and separating each layer allows having single responsibility in each layer, avoiding coupled code.
+
+2. I've avoided use the iOS interface builder because for experience working in large and scalable projects, working with this builder generate a headache through the time, specifically because the IDE generates large XML files which in git conflicts when you are creating your pull request or your merge. So, i prefer create each view through code with UIKit components and AutoLayout(Constraints), everything in code.
+
+3. To avoided a monolithic project, I've decided to use an modular architecture approach, just to avoid a large project with a lot of non-domain layers, for example a networking layer. Also, this approach allow us to be focus in business rules and respect the single responsibility principle.
+Having external modules, give us the opportunity to decouple the infrastructure layer form the business layer, and allow us to reuse this infrastructure layer in different projects, giving us a timing advantage to develop our projects.
+
+4. Having my own libraries eliminates the possibility of having a dependency on a third-party developer, so, I won't be worried about external updates and my product will be totally autonomous.
+
+5. Defining an Error Manager to handle errors in each layer, so help us to manage UI, business or networking errors in our app.
+
+
+## Trade-offs
+
+Taking into account this project was created in practical  terms and with a specific deadline, i think that could be pretty cool make a refactor to technical trends.
+
+1. Defining a reactive architecture to manage the state of the app through messages or notifications ( RxSwift, Combine).
+2. Create view and ui components through a declarative way  like SwiftUI it is. This option help us to build views faster than UIKit.
+
+Also, to get more control on the app behave, we could add Firebase Analytics and logs frameworks like sentry to logged each error or trace in our app, or if you want a custom solution, i think that we could create a log solution with AWS (Cloudwatch, lambdas, AppSync, GraphQL).
+
+Finally, would be interesting define a CI/CD solution with a CI Server like Jenkins or CircleCI, SonarQube and Fastlane to 
+ integrate and deploy the builds automatically on Apple Store avoiding human errors in this process.
+
+# Technical Approach extended
 
 ## Architecture VIPER
 
